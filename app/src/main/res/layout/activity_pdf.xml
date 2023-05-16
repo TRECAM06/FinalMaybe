@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PdfActivity"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        >
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/et_search_query"
+            app:mt_speechMode = "true"
+            app:mt_maxSuggestionsCount="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            />
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Search"
+            android:layout_weight="5"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        >
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:gravity="center"
+
+        >
+    <Button
+        android:id = "@+id/save_pdf_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Save PDF FILE"
+        android:layout_margin="2dp"
+        />
+
+    <Button
+        android:id = "@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Open Folder"
+        android:layout_margin="2dp"
+            />
+    </LinearLayout>
+</LinearLayout>
